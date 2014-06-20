@@ -37,7 +37,7 @@ $thumb_url = $thumb_url_array[0];
         </div>        
       </div>
       
-      <div class="row">
+      <div class="row feature-icons">
         <div class="small-12 medium-4 columns">
           <a class="feature-icon" <? if(get_field('link_1')){ ?> href="<? the_field('link_1') ?>" <? } ?>>            
             <?php

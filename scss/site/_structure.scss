@@ -293,7 +293,6 @@ a p {
     background-color:$secondary-color;
     border-top:solid 5px $primary-color;
     padding-bottom:5px;
-    margin-top:25px;
     .widget {
       margin-top:25px;
     }
@@ -374,6 +373,9 @@ a p {
     }
   }
   
+  .row .row.feature-icons {
+    margin-bottom:25px;
+  }
   .feature-icon {
     @media #{$medium-up} {
       text-align:center;
