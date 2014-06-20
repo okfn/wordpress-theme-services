@@ -9,6 +9,9 @@ function FoundationPress_theme_support() {
     // Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
     add_theme_support('post-thumbnails');
     // set_post_thumbnail_size(150, 150, false);
+    
+    // Images sizes
+    add_image_size( 'featured-icon', 280, 280, true );
 
     // rss thingy
     add_theme_support('automatic-feed-links');

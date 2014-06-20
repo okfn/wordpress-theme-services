@@ -32,43 +32,51 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-  <?php do_action('foundationPress_after_body'); ?>
-  
-  <div class="off-canvas-wrap">
-  <div class="inner-wrap">
-  
-  <?php do_action('foundationPress_layout_start'); ?>
-  
-  <nav class="tab-bar show-for-small-only">
-    <section class="left-small">
-      <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-    </section>
-    <section class="middle tab-bar-section">
+    <?php do_action('foundationPress_after_body'); ?>
+    
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap">
       
-      <h1 class="title"><?php bloginfo( 'name' ); ?></h1>
-
-    </section>
-  </nav>
-
-  <aside class="left-off-canvas-menu">
-    <?php foundationPress_mobile_off_canvas(); ?>
-  </aside>
-  
-        <div class="top-bar-container contain-to-grid show-for-medium-up">
-            <nav class="top-bar" data-topbar="">
+        <?php do_action('foundationPress_layout_start'); ?>
+        
+        <!--
+        <nav class="tab-bar show-for-small-only">
+          
+          <section class="middle tab-bar-section">
+            
+            <h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+      
+          </section>
+          <section class="right-small">
+            <a class="right-off-canvas-toggle menu-icon"><span></span></a>
+          </section>
+        </nav>
+      
+        <aside class="right-off-canvas-menu">
+          <?php include("searchform.php"); ?>
+          <?php foundationPress_mobile_off_canvas(); ?>
+        </aside>
+        -->
+        
+        <div class="top-bar-container contain-to-grid sticky">
+            <nav class="top-bar" data-topbar="" data-options="sticky_on: large">
                 <ul class="title-area">
                     <li class="name">
                         <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-                    </li>          
+                    </li>
+                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>        
                 </ul>
                 <section class="top-bar-section">
-                    <?php foundationPress_top_bar_l(); ?>
-                    <?php foundationPress_top_bar_r(); ?>
-                </section>
+                  <div class="search-bar">
+                    <a class="icon-search show-for-large-up"></a> 
+                    <?php include("searchform.php"); ?>
+                  </div>
+                  <?php foundationPress_top_bar_l(); ?>
+                  <?php foundationPress_top_bar_r(); ?>
+              </section>
             </nav>
         </div>
-
-
-
-<section class="container" role="document">
-  <?php do_action('foundationPress_after_header'); ?>
+    
+  
+      <section class="container" role="document">
+        <?php do_action('foundationPress_after_header'); ?>

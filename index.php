@@ -1,7 +1,19 @@
 <?php get_header(); ?>
+
+<header class="banner" role="banner" <? if ( has_post_thumbnail() ) {	?> style="background-image:url(<? echo $thumb_url; ?>)" <? ;} ?> >
+  <div class="row">
+		<div class="medium-6 columns end">
+      <h1 class="entry-title">what you can do with <strong>data</strong>.</h1>
+      <div class="intro">
+        <?php the_field('intro'); ?>
+      </div>
+		</div>
+	</div>
+</header>
+
 <div class="row">
 	<div class="small-12 large-8 columns" role="main">
-		
+	
 	<?php if ( have_posts() ) : ?>
 		
 		<?php do_action('foundationPress_before_content'); ?>

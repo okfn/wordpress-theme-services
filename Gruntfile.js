@@ -35,7 +35,8 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'js/modernizr/modernizr.min.js': ['js/modernizr/modernizr.js']
+          'js/modernizr/modernizr.min.js': ['js/modernizr/modernizr.js'],
+          'js/letteringjs/lettering.min.js': ['js/letteringjs/jquery.lettering.js']
         }
       }
     },
@@ -47,7 +48,8 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'js/foundation/js/foundation.min.js',
-          'js/init-foundation.js'
+          'js/init-foundation.js',
+          'js/letteringjs/lettering.min.js'
         ],
 
         dest: 'js/app.js',
