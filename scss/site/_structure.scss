@@ -482,4 +482,19 @@ a p {
  * ----------------------------------------------------------------------------
  */
 
-// Insert styles here
+// JM Last Tweet
+  #footer {
+    .tweetfeed {
+      margin:0;
+      li {
+        display:block;
+        .tweet-twittar,
+        .tweet-name,
+        .tweet-screen-name,
+        & > em,
+        .intent-meta {
+          display:none;
+        }
+      }
+    }
+  }
