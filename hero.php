@@ -11,20 +11,19 @@ get_header(); ?>
 $thumb_id = get_post_thumbnail_id();
 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
 $thumb_url = $thumb_url_array[0];
+
+if( get_field('enable_home_banner_slider') ) {
 ?>
-<header id="homepage-hero" class="banner" role="banner" <? if ( has_post_thumbnail() ) {	?> style="background-image:url(<? echo $thumb_url; ?>)" <? ;} ?> >
-	<div class="row">
-		<div class="medium-6 columns end">
-      <h1 class="word_split"><?php bloginfo('description'); ?></h1>
-      <div class="intro">
-        <?php the_field('intro'); ?>
-      </div>
-			<a class="large button" href="<?php the_field('cta_link'); ?>"><?php the_field('cta_button_text'); ?></a>
-		</div>
 
-	</div>
+<div class="hide-for-large-up">
+  <? include ("library/home-banner.php"); ?>
+</div>
+<div class="show-for-large-up">
+  <? include ("library/home-banner-slider.php"); ?>
+</div>
 
-</header>
+<? }
+else { include ("library/home-banner.php"); } ?>
 
 <div class="row">
   <div class="small-12 columns" role="main">

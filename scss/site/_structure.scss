@@ -372,6 +372,26 @@ a p {
       }
     }
   }
+  #homepage-hero.slider {
+    padding:0;
+    .orbit-content {
+      li {
+        display:block;
+        height:695px;
+        background-repeat:no-repeat;
+        background-position:center bottom;
+      }
+    }
+    .orbit-timer {
+      display:none;
+    }
+    .text {
+      position:absolute;
+      top:122px;
+      left:50%;
+      margin-left:-($row-width/2);
+    }
+  }
   
   .row .row.feature-icons {
     margin-bottom:25px;
