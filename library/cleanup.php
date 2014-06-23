@@ -175,4 +175,8 @@ function img_unautop($pee) {
     return $pee;
 } 
 
+
+// Remove admin bar
+add_filter('show_admin_bar', '__return_false');
+
 ?>
