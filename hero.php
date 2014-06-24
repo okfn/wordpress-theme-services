@@ -38,52 +38,58 @@ else { include ("library/home-banner.php"); } ?>
       
       <div class="row feature-icons">
         <div class="small-12 medium-4 columns">
-          <a class="feature-icon" <? if(get_field('link_1')){ ?> href="<? the_field('link_1') ?>" <? } ?>>            
-            <?php
-            $image1 = wp_get_attachment_image_src(get_field('image_1'), 'featured-icon' );
-            $image1_large = wp_get_attachment_image_src(get_field('image_1'), 'full' );
-            ?>
-            <img src="<?php echo $image1[0]; ?>" data-interchange="[<?php echo $image1_large[0]; ?>, (retina)]" class="show-for-medium-up" />
-            <h2><?php the_field('heading_1'); ?></h2>
+          <div class="feature-icon">
+            <a <? if(get_field('link_1')){ ?> href="<? the_field('link_1') ?>" <? } ?>>            
+              <?php
+              $image1 = wp_get_attachment_image_src(get_field('image_1'), 'featured-icon' );
+              $image1_large = wp_get_attachment_image_src(get_field('image_1'), 'full' );
+              ?>
+              <img src="<?php echo $image1[0]; ?>" data-interchange="[<?php echo $image1_large[0]; ?>, (retina)]" class="show-for-medium-up" />
+              <h2><?php the_field('heading_1'); ?></h2>
+            </a>
             <?           
             if(get_field('descripton_1'))
             {
-              echo '<p>' . get_field('descripton_1') . '</p>';
+              echo get_field('descripton_1');
             }             
             ?>
-          </a>
+          </div>
         </div>
         <div class="small-12 medium-4 columns">
-          <a class="feature-icon" <? if(get_field('link_2')){ ?> href="<? the_field('link_2') ?>" <? } ?>>            
-            <?php
-            $image2 = wp_get_attachment_image_src(get_field('image_2'), 'featured-icon' );
-            $image2_large = wp_get_attachment_image_src(get_field('image_2'), 'full' );
-            ?>
-            <img src="<?php echo $image2[0]; ?>" data-interchange="[<?php echo $image2_large[0]; ?>, (retina)]" class="show-for-medium-up" />
-            <h2><?php the_field('heading_2'); ?></h2>
+          <div class="feature-icon">
+            <a <? if(get_field('link_2')){ ?> href="<? the_field('link_2') ?>" <? } ?>>            
+              <?php
+              $image2 = wp_get_attachment_image_src(get_field('image_2'), 'featured-icon' );
+              $image2_large = wp_get_attachment_image_src(get_field('image_2'), 'full' );
+              ?>
+              <img src="<?php echo $image2[0]; ?>" data-interchange="[<?php echo $image2_large[0]; ?>, (retina)]" class="show-for-medium-up" />
+              <h2><?php the_field('heading_2'); ?></h2>
+            </a>
             <?           
             if(get_field('descripton_2'))
             {
-              echo '<p>' . get_field('descripton_2') . '</p>';
+              echo get_field('descripton_2');
             }             
             ?>
-          </a>
+          </div>
         </div>
         <div class="small-12 medium-4 columns">
-          <a class="feature-icon" <? if(get_field('link_3')){ ?> href="<? the_field('link_3') ?>" <? } ?>>            
-            <?php
-            $image3 = wp_get_attachment_image_src(get_field('image_3'), 'featured-icon' );
-            $image3_large = wp_get_attachment_image_src(get_field('image_3'), 'full' );
-            ?>
-            <img src="<?php echo $image3[0]; ?>" data-interchange="[<?php echo $image3_large[0]; ?>, (retina)]" class="show-for-medium-up" />
-            <h2><?php the_field('heading_3'); ?></h2>
+          <div class="feature-icon">
+            <a <? if(get_field('link_3')){ ?> href="<? the_field('link_3') ?>" <? } ?>>            
+              <?php
+              $image3 = wp_get_attachment_image_src(get_field('image_3'), 'featured-icon' );
+              $image3_large = wp_get_attachment_image_src(get_field('image_3'), 'full' );
+              ?>
+              <img src="<?php echo $image3[0]; ?>" data-interchange="[<?php echo $image3_large[0]; ?>, (retina)]" class="show-for-medium-up" />
+              <h2><?php the_field('heading_3'); ?></h2>
+            </a>
             <?           
             if(get_field('descripton_3'))
             {
               echo '<p>' . get_field('descripton_3') . '</p>';
             }             
             ?>
-          </a>
+          </div>
         </div>
       </div>
       
