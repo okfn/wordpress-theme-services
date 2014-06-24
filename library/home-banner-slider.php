@@ -5,7 +5,7 @@ $bg3url = wp_get_attachment_image_src(get_field('home_banner_slider_image_3'), '
 
 <header id="homepage-hero" class="slider banner" role="banner">
 	
-  <ul class="orbit-content" data-orbit data-options="navigation_arrows: false; slide_number: false; bullets: false; pause_on_hover: false;">
+  <ul class="orbit-content" data-orbit data-options="navigation_arrows: false; slide_number: false; bullets: false; pause_on_hover: false; animation_speed: 600;">
     <li data-orbit-slide="banner-1" <? if ( has_post_thumbnail() ) {	?> style="background-image:url(<? echo $thumb_url; ?>)" <? ;} ?> >
     </li>
     <li data-orbit-slide="banner-2" style="background-image:url(<? echo $bg2url[0]; ?>)">
