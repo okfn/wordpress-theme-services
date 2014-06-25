@@ -10,6 +10,9 @@ function foundationpress_sidebar_widgets() {
   else if ($footer_widget_grid == '6') {
     $footer_widget_columns = '6';
   }
+  else if ($footer_widget_grid == '12') {
+    $footer_widget_columns = '12';
+  }
   else {
     $footer_widget_columns = '4';
   }
