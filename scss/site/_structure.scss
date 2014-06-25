@@ -482,19 +482,9 @@ a p {
  * ----------------------------------------------------------------------------
  */
 
-// JM Last Tweet
+// Fetch Tweets
   #footer {
-    .tweetfeed {
-      margin:0;
-      li {
-        display:block;
-        .tweet-twittar,
-        .tweet-name,
-        .tweet-screen-name,
-        & > em,
-        .intent-meta {
-          display:none;
-        }
-      }
+    h3.fetch-tweets-widget {
+      font-size:rem-calc(18);
     }
   }
