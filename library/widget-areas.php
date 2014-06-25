@@ -1,11 +1,23 @@
 <?php
 
 function foundationpress_sidebar_widgets() {
+  $the_sidebars = wp_get_sidebars_widgets();
+  $footer_widget_count = count( $the_sidebars['footer-widgets'] );
+  $footer_widget_grid = (12 / $footer_widget_count);
+  if ($footer_widget_grid == '3') {
+    $footer_widget_columns = '3';
+  }
+  else if ($footer_widget_grid == '6') {
+    $footer_widget_columns = '6';
+  }
+  else {
+    $footer_widget_columns = '4';
+  }
   register_sidebar(array(
       'id' => 'footer-widgets',
       'name' => __('Footer widgets', 'foundationpress'),
       'description' => __('Drag widgets to this footer container', 'foundationpress'),
-      'before_widget' => '<article id="%1$s" class="large-4 columns widget %2$s">',
+      'before_widget' => '<article id="%1$s" class="large-'.$footer_widget_columns.' columns widget %2$s">',
       'after_widget' => '</article>',
       'before_title' => '<h6>',
       'after_title' => '</h6>'      
