@@ -86,7 +86,7 @@ else { include ("library/home-banner.php"); } ?>
             <?           
             if(get_field('descripton_3'))
             {
-              echo '<p>' . get_field('descripton_3') . '</p>';
+              echo get_field('descripton_3');
             }             
             ?>
           </div>
