@@ -26,5 +26,23 @@ $(document).ready(function() {
   $(".word_split").lettering('words');
 });
 </script>
+
+<!-- temp zendesk -->
+<script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+<style type="text/css" media="screen, projection">
+  @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+</style>
+<script type="text/javascript">
+  if (typeof(Zenbox) !== "undefined") {
+    Zenbox.init({
+      dropboxID:   "20265572",
+      url:         "https://okfn.zendesk.com",
+      tabTooltip:  "Contact Us",
+      tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_ask_us.png",
+      tabColor:    "black",
+      tabPosition: "Left"
+    });
+  }
+</script>
 </body>
 </html>
