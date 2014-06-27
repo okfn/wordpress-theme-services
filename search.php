@@ -40,5 +40,5 @@
 	<?php do_action('foundationPress_after_content'); ?>
 
 	</div>
-		
+</div>
 <?php get_footer(); ?>

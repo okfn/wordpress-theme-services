@@ -436,6 +436,15 @@ a p {
     padding-bottom:20px;
   }
   
+  
+  // Search
+  .search-results .page {
+    .updated,
+    .author {
+      display:none;
+    }
+  }
+    
 
 	/**
 	 * 4.2 Posts
