@@ -39,7 +39,7 @@ $(document).ready(function() {
       url:         "https://okfn.zendesk.com",
       tabTooltip:  "Contact Us",
       tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_ask_us.png",
-      tabColor:    "black",
+      tabColor:    "#629300",
       tabPosition: "Left"
     });
   }
