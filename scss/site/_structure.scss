@@ -267,6 +267,15 @@ a p {
     background-repeat:no-repeat;
     background-size: auto 100%;
     margin-bottom:30px;
+    
+    & > .row {
+      padding-bottom:20px;
+      
+      @media #{$medium-up} {
+        padding-bottom:40px;
+      }
+    }
+    
     h1 strong {
       font-weight:normal;
       color:$primary-color;
