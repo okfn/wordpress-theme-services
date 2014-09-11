@@ -5,8 +5,8 @@
  * http://codex.wordpress.org/Function_Reference/register_nav_menus#Examples
  */
 register_nav_menus(array(
-    'top-bar-l' => 'Left Top Bar', // registers the menu in the WordPress admin menu editor
-    'top-bar-r' => 'Right Top Bar',
+    'top-bar-l' => 'Top Bar', // registers the menu in the WordPress admin menu editor
+    //'top-bar-r' => 'Right Top Bar',
     'mobile-off-canvas' => 'Mobile'
 ));
 
@@ -20,7 +20,7 @@ function foundationPress_top_bar_l() {
         'container' => false,                           // remove nav container
         'container_class' => '',                        // class of container
         'menu' => '',                                   // menu name
-        'menu_class' => 'top-bar-menu left',            // adding custom nav class
+        'menu_class' => 'top-bar-menu',            // adding custom nav class
         'theme_location' => 'top-bar-l',                // where it's located in the theme
         'before' => '',                                 // before each link <a> 
         'after' => '',                                  // after each link </a>

@@ -72,7 +72,7 @@
                     <?php include("searchform.php"); ?>
                   </div>
                   <?php foundationPress_top_bar_l(); ?>
-                  <?php foundationPress_top_bar_r(); ?>
+                  <?php //foundationPress_top_bar_r(); ?>
               </section>
             </nav>
         </div>
