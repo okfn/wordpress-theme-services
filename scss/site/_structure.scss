@@ -502,8 +502,6 @@ a p {
   //Tables
   .comparison-table {
     width:100%;
-    margin-left:-0.5625rem;
-    margin-right:-0.5625rem;
     background-color:$table-even-row-bg;
     
     td {
@@ -564,6 +562,33 @@ a p {
       
       .yes {
         color:$primary-color;
+      }
+    }
+  }
+  
+  //Panels
+  .panel {
+    border:none;
+    line-height:1.4;
+    
+    p.icon {
+      text-align:center;
+      font-size:rem-calc(70);
+      margin-bottom:rem-calc(8);
+      line-height:1.2;
+    }
+    
+    &.blue {
+      background-color:transparentize($blue, 0.9);
+      [class^="icon-"], [class*=" icon-"] {
+        color:$blue;
+      }
+    }
+    
+    &.express-blue {
+      background-color:transparentize($express-blue, 0.9);
+      [class^="icon-"], [class*=" icon-"] {
+        color:$express-blue;
       }
     }
   }
