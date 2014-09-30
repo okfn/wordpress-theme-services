@@ -20,7 +20,8 @@ $bg3url = wp_get_attachment_image_src(get_field('home_banner_slider_image_3'), '
       <div class="intro">
         <?php the_field('intro'); ?>
       </div>
-			<a class="large button" href="<?php the_field('cta_link'); ?>"><?php the_field('cta_button_text'); ?></a>
+			<!--<a class="large button" href="<?php the_field('cta_link'); ?>"><?php the_field('cta_button_text'); ?></a>-->
+      <a class="large button" href="http://services.okfn.org/files/2014/09/Open-Knowledge-Services.pdf"><?php the_field('cta_button_text'); ?></a>
 		</div>
 	</div>
 </header>
