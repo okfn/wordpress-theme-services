@@ -30,12 +30,34 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
     
     <?php wp_head(); ?>
+    <style>
+      .contain-to-grid {
+        background-color:<? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#E6E5E3';} ?>;
+      }
+      @media only screen and (min-width: 64.063em) { 
+        .contain-to-grid {
+          background-color:transparent;
+        }
+        .contain-to-grid.fixed {
+          background-color:<? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#E6E5E3';} ?>;
+        }
+      }
+      .invert-banner .top-bar-section .search-bar .icon-search {
+        color: <? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#E6E5E3';} ?>;
+      }
+      .invert-banner .top-bar-section > ul > li.active:not(.has-form) > a:not(.button) {
+        color: <? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#000';} ?>;
+      }
+      .invert-banner .top-bar-section ul .has-dropdown.active > a:after {
+        border-top-color: <? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#000';} ?>;
+      }
+    </style>
   </head>
   <body <?php body_class(); ?>>
     <?php do_action('foundationPress_after_body'); ?>
     
     <div class="off-canvas-wrap">
-      <div class="inner-wrap">
+      <div class="inner-wrap <? if( get_field('invert_banner_text') ) { echo "invert-banner"; } ?> ">
       
         <?php do_action('foundationPress_layout_start'); ?>
         

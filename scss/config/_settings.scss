@@ -56,9 +56,9 @@
 // We use these as default colors throughout
    $primary-color: #7ab800;
    $secondary-color: #f8f8f8;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
+   $alert-color: #ff0000;
+   $success-color: $secondary-color;
+   $warning-color: #e0ad00;
    $info-color: #e6e5e3;
    
    $body-bg: $secondary-color;
@@ -1080,7 +1080,7 @@
 
 // These control the table cell border style
 // $table-border-style: solid;
-// $table-border-size: 1px;
+   $table-border-size: 0;
 // $table-border-color: #ddd;
 
 // These control the table head styles
@@ -1174,7 +1174,7 @@
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-   $topbar-height: 122px;
+   $topbar-height: 98px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1182,7 +1182,7 @@
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-   $topbar-dropdown-bg: $info-color;
+   $topbar-dropdown-bg: transparent;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: normal;

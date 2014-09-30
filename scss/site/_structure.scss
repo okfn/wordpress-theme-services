@@ -36,6 +36,12 @@ button,
   box-shadow:0 1px 0 0 rgba(0,0,0,0.60);
 }
 
+$green: $primary-color;
+$blue: #00a5e0;
+$express-blue: #065e79;
+$red: $alert-color;
+$orange: $warning-color;
+
 
 /**
  * 2.0 Typography
@@ -60,16 +66,20 @@ a p {
       position:fixed;
       z-index:99;
     }
-    .contain-to-grid,
-    .top-bar {
+    .contain-to-grid {
       background-color:transparent;
     }
+  }
+  .top-bar,
+  .top-bar.expanded .title-area,
+  .top-bar-section .search-bar,
+  .top-bar-section ul {
+    background-color:transparent;
   }
   .top-bar.expanded {
     box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.1);
   }
   .contain-to-grid.fixed {
-    background-color:$topbar-bg-color;
     .top-bar {
       box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.1);
     }
@@ -88,12 +98,20 @@ a p {
   
   .top-bar .name h1 a {
     padding: 0;
-    width: 186px;
+    width: 250px;
     background-image:url(../assets/img/logo.png);
     background-repeat:no-repeat;
-    background-position:left center;
+    background-position:left 0;
     text-indent:-9999px;
     overflow:hidden;
+    background-size:250px auto;
+    height:75px;
+    margin-top:24px;
+    margin-left:10px;
+    
+    .invert-banner & {
+      background-position:left -75px;
+    }
   }
   .svg .top-bar .name h1 a {
     background-image:url(../assets/img/logo.svg);
@@ -107,10 +125,13 @@ a p {
   }
   
   @media #{$large-up} {
-    .top-bar-section ul {
-      background-color:transparent;
-      .has-dropdown.active > a:after {
-        border-color: #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    .top-bar-section {
+      margin-right:1.25rem;
+       ul {
+        background-color:transparent;
+        .has-dropdown.active > a:after {
+          border-color: #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+        }
       }
     }
     .top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
@@ -153,7 +174,7 @@ a p {
       padding-right: 18px !important;
     }
     .top-bar-section .has-dropdown > a:after {
-      margin-top: -48px;
+      margin-top: -36px;
       margin-right:7px;
     }
     
@@ -183,7 +204,6 @@ a p {
   
   .top-bar-section .search-bar {
     padding:12px 40px;
-    background-color:$info-color;
     #searchform {
       input,
       .button,
@@ -251,6 +271,21 @@ a p {
     }
   }
   
+  .invert-banner {
+    .top-bar-section ul li:not(.has-form) > a {
+      color: #fff;
+    }
+    .top-bar-section li:not(.has-form) a:hover:not(.button) {
+      background-color:transparentize( $body-font-color, 0.8 );
+    }
+    .top-bar-section > ul > li.active:not(.has-form) > a:not(.button) {
+      background-color: #fff;
+    }
+    .top-bar-section .search-bar .icon-search {
+      background-color: #fff;
+    }
+  }
+  
   .banner,
   .container > div[role="banner"] {
     font-size:rem-calc(26);
@@ -271,6 +306,13 @@ a p {
       @media #{$medium-up} {
         padding-top:40px;
         padding-bottom:60px;
+      }
+    }
+    
+    .invert-banner & {
+      h1,
+      .intro {
+        color:#fff;
       }
     }
     
@@ -449,6 +491,76 @@ a p {
     .updated,
     .author {
       display:none;
+    }
+  }
+  
+  
+  //Tables
+  .comparison-table {
+    width:100%;
+    margin-left:-0.5625rem;
+    margin-right:-0.5625rem;
+    background-color:$table-even-row-bg;
+    
+    td {
+      background-color:#FFFFFF;
+    }
+    
+    thead {
+      background-color:transparent;
+    
+      .compare-item {
+        text-align:center;
+        background-color:$info-color;
+        text-transform:uppercase;
+        
+        &.blue {
+          background-color:$blue;
+          color:#fff;
+        }
+        &.express-blue {
+          background-color:$express-blue;
+          color:#fff;
+        }
+        
+        .has-tip {
+          color:#fff;
+          border:none;
+        }
+        
+        @media #{$medium-up} {
+          width:25%;
+          padding-top:20px;
+          padding-bottom:20px;
+        }
+      }
+    }
+    
+    tbody {
+      tr:hover {
+        td {
+          background-color:$green;
+          color:#fff;
+
+          &.no {
+            background-color:$table-even-row-bg;
+            color:$body-font-color;
+          }
+        }
+      }
+    
+      .yes,
+      .no {
+        text-align:center;
+        
+        [class^="icon-"], [class*=" icon-"] {
+          font-size:rem-calc(30);
+        }
+      }
+      
+      .yes {
+        color:$primary-color;
+      }
     }
   }
     
