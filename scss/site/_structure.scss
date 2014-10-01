@@ -98,19 +98,29 @@ a p {
   
   .top-bar .name h1 a {
     padding: 0;
-    width: 250px;
+    width: 167px;
     background-image:url(../assets/img/logo.png);
     background-repeat:no-repeat;
     background-position:left 0;
     text-indent:-9999px;
     overflow:hidden;
-    background-size:250px auto;
-    height:75px;
+    background-size:167px auto;
+    height:50px;
     margin-top:24px;
     margin-left:10px;
     
     .invert-banner & {
-      background-position:left -75px;
+      background-position:left -50px;
+    }
+    
+    @media #{$medium-up} {
+      width: 250px;
+      height:75px;
+      background-size:250px auto;
+      
+      .invert-banner & {
+        background-position:left -75px;
+      }
     }
   }
   .svg .top-bar .name h1 a {
@@ -194,6 +204,10 @@ a p {
         color:#fff;
       }
     }
+  }
+  
+  .top-bar .toggle-topbar.menu-icon {
+    margin-top: -44px;
   }
   
   @media #{$small-only} {
@@ -285,8 +299,11 @@ a p {
     .top-bar-section .search-bar .icon-search {
       background-color: #fff;
     }
-    .top-bar-section .has-dropdown > a:after {
-      border-top-color: #fff;
+    .top-bar .toggle-topbar.menu-icon a {
+      color: #fff;
+    }
+    .top-bar .toggle-topbar.menu-icon a:after {
+      box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
     }
   }
   

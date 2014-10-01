@@ -41,15 +41,15 @@
         .contain-to-grid.fixed {
           background-color:<? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#E6E5E3';} ?>;
         }
+        .invert-banner .top-bar-section ul .has-dropdown.active > a:after {
+          border-top-color: <? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#000';} ?>;
+        }
       }
       .invert-banner .top-bar-section .search-bar .icon-search {
         color: <? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#E6E5E3';} ?>;
       }
       .invert-banner .top-bar-section > ul > li.active:not(.has-form) > a:not(.button) {
         color: <? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#000';} ?>;
-      }
-      .invert-banner .top-bar-section ul .has-dropdown.active > a:after {
-        border-top-color: <? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#000';} ?>;
       }
     </style>
   </head>
