@@ -434,6 +434,10 @@ a p {
     }
     .button {
       margin-bottom:30px;
+      
+      @media #{$small-only} { 
+        width:100%;
+      }
     }
 	}
   @media only screen and (min-width: 50em) and (max-width: 64em) {
