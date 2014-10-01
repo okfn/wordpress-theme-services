@@ -61,15 +61,18 @@ a p {
   .f-topbar-fixed {
     padding-top:0 !important;
   }
+  @media #{$medium-up} {
+    .contain-to-grid {
+      position:absolute;
+      z-index:99;
+    }
+  }
   @media #{$large-up} {
     .contain-to-grid {
       position:fixed;
-      z-index:99;
-    }
-    .contain-to-grid {
-      background-color:transparent;
     }
   }
+  
   .top-bar,
   .top-bar.expanded .title-area,
   .top-bar-section .search-bar,
@@ -336,6 +339,23 @@ a p {
     background-size: auto 100%;
     margin-bottom:30px;
     
+    @media #{$large-up} { 
+      &.has-image {
+        height:400px;
+        
+        & > .row {
+          position:relative;
+          height:100%;
+          
+          & > .columns { 
+            position:absolute;
+            width:31rem;
+            bottom:60px;
+          }
+        }
+      }
+    }
+    
     & > .row {
       padding-bottom:20px;
       
@@ -361,6 +381,9 @@ a p {
       background-image:none !important;
     }
 
+    @media #{$medium-up} { 
+      padding-top:80px;
+    }
     @media #{$large-up} { 
       padding-top:122px;
     }

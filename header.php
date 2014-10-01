@@ -34,11 +34,12 @@
       .contain-to-grid {
         background-color:<? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#E6E5E3';} ?>;
       }
-      @media only screen and (min-width: 64.063em) { 
+      @media only screen and (min-width: 40.063em) { 
         .contain-to-grid {
           background-color:transparent;
         }
-        .contain-to-grid.fixed {
+        .contain-to-grid.fixed,
+        .top-bar.expanded {
           background-color:<? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#E6E5E3';} ?>;
         }
         .invert-banner .top-bar-section ul .has-dropdown.active > a:after {
