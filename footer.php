@@ -24,6 +24,8 @@
 <script>
 $(document).ready(function() {
   $(".word_split").lettering('words');
+  
+  $('#homepage-hero.slider .text').animate({left: '50%'});
 });
 </script>
 

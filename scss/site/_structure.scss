@@ -483,6 +483,10 @@ a p {
       top:122px;
       left:50%;
       margin-left:-($row-width/2);
+      
+      .js & {
+        left:0;
+      }
     }
   }
   
