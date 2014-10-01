@@ -96,30 +96,43 @@ a p {
     margin-bottom: 0;
   }
   
-  .top-bar .name h1 a {
-    padding: 0;
-    width: 167px;
-    background-image:url(../assets/img/logo.png);
-    background-repeat:no-repeat;
-    background-position:left 0;
-    text-indent:-9999px;
-    overflow:hidden;
-    background-size:167px auto;
-    height:50px;
-    margin-top:24px;
-    margin-left:10px;
-    
-    .invert-banner & {
-      background-position:left -50px;
+  .top-bar {
+    @media #{$small-only} {
+      height: 80px;
     }
-    
-    @media #{$medium-up} {
-      width: 250px;
-      height:75px;
-      background-size:250px auto;
+    .name {
+      padding-top:24px;
       
-      .invert-banner & {
-        background-position:left -75px;
+      @media #{$small-only} {
+        padding-top:17px;
+        height: 80px;
+      }
+  
+      h1 a {
+        padding: 0;
+        width: 167px;
+        background-image:url(../assets/img/logo.png);
+        background-repeat:no-repeat;
+        background-position:left 0;
+        text-indent:-9999px;
+        overflow:hidden;
+        background-size:167px auto;
+        height:50px;
+        margin-left:10px;
+        
+        .invert-banner & {
+          background-position:left -50px;
+        }
+        
+        @media #{$medium-up} {
+          width: 250px;
+          height:75px;
+          background-size:250px auto;
+          
+          .invert-banner & {
+            background-position:left -75px;
+          }
+        }
       }
     }
   }
@@ -184,7 +197,7 @@ a p {
       padding-right: 18px !important;
     }
     .top-bar-section .has-dropdown > a:after {
-      margin-top: -36px;
+      margin-top: -48px;
       margin-right:7px;
     }
     
@@ -206,9 +219,10 @@ a p {
     }
   }
   
-  .top-bar .toggle-topbar.menu-icon {
-    margin-top: -44px;
+  .top-bar-section .dropdown li.title h5 a {
+    line-height:normal;
   }
+
   
   @media #{$small-only} {
     .top-bar .toggle-topbar.menu-icon {
@@ -217,7 +231,7 @@ a p {
   }
   
   .top-bar-section .search-bar {
-    padding:12px 40px;
+    padding:0 20px 12px 20px;
     #searchform {
       input,
       .button,
@@ -227,6 +241,7 @@ a p {
         border-radius:0;
         box-shadow:none;
         line-height:normal;
+        height:30px;
       }
     }
     @media #{$large-up} {
@@ -309,7 +324,11 @@ a p {
   
   .banner,
   .container > div[role="banner"] {
-    font-size:rem-calc(26);
+    font-size:rem-calc(18);
+    
+    @media #{$medium-up} { 
+      font-size:rem-calc(26);
+    }
   }
   .container > div[role="banner"] {
     margin-bottom:50px;
