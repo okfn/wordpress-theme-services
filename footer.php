@@ -33,7 +33,7 @@ $(document).ready(function() {
   @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
 </style>
 <script type="text/javascript">
-  if (typeof(Zenbox) !== "undefined") {
+  if ((typeof(Zenbox) !== "undefined") && (matchMedia(Foundation.media_queries['large']).matches)) {
     Zenbox.init({
       dropboxID:   "20265572",
       url:         "https://okfn.zendesk.com",
