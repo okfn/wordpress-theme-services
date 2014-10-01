@@ -304,10 +304,6 @@ a p {
     .top-bar-section ul li:not(.has-form) > a {
       color: #fff;
     }
-    .top-bar-section li:not(.has-form) a:hover:not(.button),
-    .top-bar-section ul li:hover:not(.has-form) > a {
-      background-color:transparentize( $body-font-color, 0.8 );
-    }
     .top-bar-section > ul > li.active:not(.has-form) > a:not(.button) {
       background-color: #fff;
     }
