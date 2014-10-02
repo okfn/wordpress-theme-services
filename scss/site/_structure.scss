@@ -319,6 +319,9 @@ a p {
     .top-bar .toggle-topbar.menu-icon a:after {
       box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
     }
+    .top-bar-section .dropdown li.title h5 a {
+      color: #fff;
+    }
   }
   
   .banner,
