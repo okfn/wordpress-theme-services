@@ -164,6 +164,10 @@ a p {
       margin-top: -9px;
       opacity:0.5;
     }
+    .top-bar-section .dropdown li:hover:not(.has-form) > a:not(.button) {
+      background-color:darken($topbar-dropdown-link-bg, 8);
+      color:#fff;
+    }
     .top-bar-section > ul > li.has-dropdown:hover > a:before {
       content:'';
       width: 0;
