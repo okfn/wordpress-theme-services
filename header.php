@@ -22,6 +22,7 @@
     } ?></title>
     
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css" />
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
     
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
@@ -30,6 +31,7 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
     
     <?php wp_head(); ?>
+    <? if ( is_page() || is_single()) { ?>
     <style>
       .contain-to-grid {
         background-color:<? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#E6E5E3';} ?>;
@@ -55,12 +57,13 @@
         color: <? if(get_field('banner_colour')) { echo get_field('banner_colour') . ';';} else { echo '#000';} ?>;
       }
     </style>
+    <? } ?>
   </head>
   <body <?php body_class(); ?>>
     <?php do_action('foundationPress_after_body'); ?>
     
     <div class="off-canvas-wrap">
-      <div class="inner-wrap <? if( get_field('invert_banner_text') ) { echo "invert-banner"; } ?> ">
+      <div class="inner-wrap <? if ( is_page() || is_single()) { if ( get_field('invert_banner_text') ) { echo "invert-banner"; } }?>">
       
         <?php do_action('foundationPress_layout_start'); ?>
         

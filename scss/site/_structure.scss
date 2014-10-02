@@ -326,6 +326,11 @@ a p {
     .top-bar-section .dropdown li.title h5 a {
       color: #fff;
     }
+    @media #{$large-up} {
+      .top-bar-section .has-dropdown > a:after {
+        border-top-color: #fff;
+      }
+    }
   }
   
   .banner,
@@ -669,7 +674,69 @@ a p {
 	 * ------------------------------------
 	 */
 
-	// Insert styles here
+	.single {
+    .banner {
+      background-size:cover;
+      background-position:center center;
+      
+      .author-details {
+        @media #{$small-only} {
+          display:none;
+        }
+      }
+      .round-avatar {
+        display:block;
+        width:80px;
+        height:80px;
+        border-radius:50%;
+        overflow:hidden;
+        float:left;
+        margin-right:10px;
+        border:solid 2px rgba( $body-font-color, .1 );
+        background-color:rgba( $body-font-color, .1 );
+        
+        img {
+          width:100%;
+        }
+      }
+      
+      .author-name {
+        line-height:80px;
+        color:$body-font-color;
+      }
+    }
+    
+    .invert-banner .banner {
+      .round-avatar {
+        border-color:#fff;
+        background-color:#fff;
+      }
+      
+      .author-name {
+        color:#fff;
+      }
+    }
+    
+    .post {
+      header {
+        .entry-title {
+          font-weight:900;
+        }
+        
+        time {
+          display:block;
+          margin-bottom:rem-calc(20);
+          color:lighten( $body-font-color, 40% );
+        }
+        
+        .byline.author {
+          @media #{$medium-up} {
+            display:none;
+          }
+        }
+      }
+    }
+  }
 
 
 	/**
