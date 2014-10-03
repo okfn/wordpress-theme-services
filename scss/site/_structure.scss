@@ -51,6 +51,16 @@ $orange: $warning-color;
 a p {
   color:$body-font-color;
 }
+//attempt to limit the damage done by wp
+p:empty {
+  display:none;
+}
+br {
+  display:none;
+}
+p br {
+  display:block;
+}
 
 
 /**
