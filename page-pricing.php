@@ -69,20 +69,15 @@ get_header();
       </dl>
     </div>
   </div>
-  <?
-    function convertCurrency($amount, $from, $to){
-      $url  = "https://www.google.com/finance/converter?a=$amount&from=$from&to=$to";
-      $data = file_get_contents($url);
-      preg_match("/<span class=bld>(.*)<\/span>/",$data, $converted);
-      $converted = preg_replace("/[^0-9.]/", "", $converted[1]);
-      return round($converted, 3);
-    }
+  <? 
+  require_once 'library/currency-convert/convert.php';
+  $convert = new Convert;
   ?>
   <div class="row" data-equalizer>
     <div class="small-12 medium-4 columns">
       <ul class="pricing-table" data-equalizer-watch>
         <li class="title">Pilot</li>
-        <li class="price"><span class="gbp">&pound;850</span> <span class="usd">&#36;<? echo round (convertCurrency(850, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round (convertCurrency(850, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
+        <li class="price"><span class="gbp">&pound;850</span> <span class="usd">&#36;<? echo round ($convert->convert(850, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round ($convert->convert(850, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
         <li class="bullet-item">Online documentation</li>
         <li class="bullet-item">15GB of file storage<sup>2</sup></li>
         <li class="bullet-item">Up to 3 editors</li>
@@ -94,7 +89,7 @@ get_header();
     <div class="small-12 medium-4 columns">
       <ul class="pricing-table" data-equalizer-watch>
         <li class="title">Production</li>
-        <li class="price"><span class="gbp">&pound;1500</span> <span class="usd">&#36;<? echo round (convertCurrency(1500, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round (convertCurrency(1500, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
+        <li class="price"><span class="gbp">&pound;1500</span> <span class="usd">&#36;<? echo round ($convert->convert(1500, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round ($convert->convert(1500, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
         <li class="bullet-item">Online documentation</li>
         <li class="bullet-item">50GB of file storage<sup>2</sup></li>
         <li class="bullet-item">Up to 5 editors</li>
@@ -106,7 +101,7 @@ get_header();
     <div class="small-12 medium-4 columns">
       <ul class="pricing-table" data-equalizer-watch>
         <li class="title">Professional</li>
-        <li class="price"><span class="gbp">&pound;2500</span> <span class="usd">&#36;<? echo round (convertCurrency(2500, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round (convertCurrency(2500, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
+        <li class="price"><span class="gbp">&pound;2500</span> <span class="usd">&#36;<? echo round ($convert->convert(2500, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round ($convert->convert(2500, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
         <li class="bullet-item">Includes 1 day of administrator training on site<sup>1</sup></li>
         <li class="bullet-item">100GB of file storage<sup>2</sup></li>
         <li class="bullet-item">Up to 10 editors</li>
