@@ -83,7 +83,7 @@ get_header();
         <li class="bullet-item">Up to 3 editors</li>
         <li class="bullet-item">Support via email for site administrators</li>
         <li class="bullet-item">Response within one business day<sup>4</sup></li>
-        <li class="cta-button"><a class="button" href="{{ site.baseurl}}/contact">Get Started</a></li>
+        <li class="cta-button"><a class="button" href="contact-us">Get Started</a></li>
       </ul>
     </div>
     <div class="small-12 medium-4 columns">
@@ -95,7 +95,7 @@ get_header();
         <li class="bullet-item">Up to 5 editors</li>
         <li class="bullet-item">Support by email and phone for site administrators</li>
         <li class="bullet-item">Response within 4 working hours<sup>4</sup></li>
-        <li class="cta-button"><a class="button" href="{{ site.baseurl}}/contact">Get Started</a></li>
+        <li class="cta-button"><a class="button" href="contact-us">Get Started</a></li>
       </ul>
     </div>
     <div class="small-12 medium-4 columns">
@@ -107,7 +107,7 @@ get_header();
         <li class="bullet-item">Up to 10 editors</li>
         <li class="bullet-item">Support by email and phone. Support for editors as well as administrators</li>
         <li class="bullet-item">Response within two working hours<sup>4</sup></li>
-        <li class="cta-button"><a class="button" href="{{ site.baseurl}}/contact">Get Started</a></li>
+        <li class="cta-button"><a class="button" href="contact-us">Get Started</a></li>
       </ul>
     </div>
   </div>
