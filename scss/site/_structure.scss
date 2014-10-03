@@ -401,6 +401,10 @@ a p {
     }
   }
   
+  section.container > section {
+    padding-top:20px;
+  }
+  
   .secondary {
     background-color:$secondary-color;
   }
@@ -668,6 +672,37 @@ a p {
     }
   }
   
+  @media #{$medium-up} {
+    .svg .feature-list [class^="feature-icon"] {
+      padding-left:90px;
+      background-image:url(../assets/img/icon-ckan.svg);
+      background-repeat:no-repeat;
+    }
+    .svg .feature-list .feature-icon-code {
+      background-image:url(../assets/img/icon-code.svg);
+    }
+    .svg .feature-list .feature-icon-lock {
+      background-image:url(../assets/img/icon-lock.svg);
+    }
+    .svg .feature-list .feature-icon-cursor {
+      background-image:url(../assets/img/icon-cursor.svg);
+    }
+    .svg .feature-list .feature-icon-puzzle {
+      background-image:url(../assets/img/icon-puzzle.svg);
+    }
+    .svg .feature-list .feature-icon-chart {
+      background-image:url(../assets/img/icon-chart.svg);
+    }
+    .svg .feature-list .feature-icon-open {
+      background-image:url(../assets/img/icon-open.svg);
+    }
+    .svg .feature-list .feature-icon-phone {
+      background-image:url(../assets/img/icon-phone.svg);
+    }
+    .svg .feature-list .feature-icon-org {
+      background-image:url(../assets/img/icon-org.svg);
+    }
+  }
   
   .currency.sub-nav {
     float: right;
