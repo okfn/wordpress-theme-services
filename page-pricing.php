@@ -82,7 +82,7 @@ get_header();
     <div class="small-12 medium-4 columns">
       <ul class="pricing-table" data-equalizer-watch>
         <li class="title">Pilot</li>
-        <li class="price"><span class="gbp">&pound;850</span> <span class="usd">&#36;<? echo round (convertCurrency(850, "GBP", "USD"), -1); ?></span> <span class="eur">&euro;<? echo round (convertCurrency(850, "GBP", "EUR"), -1); ?></span> <small>per month</small></li>
+        <li class="price"><span class="gbp">&pound;850</span> <span class="usd">&#36;<? echo round (convertCurrency(850, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round (convertCurrency(850, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
         <li class="bullet-item">Online documentation</li>
         <li class="bullet-item">15GB of file storage<sup>2</sup></li>
         <li class="bullet-item">Up to 3 editors</li>
@@ -94,7 +94,7 @@ get_header();
     <div class="small-12 medium-4 columns">
       <ul class="pricing-table" data-equalizer-watch>
         <li class="title">Production</li>
-        <li class="price"><span class="gbp">&pound;1500</span> <span class="usd">&#36;<? echo round (convertCurrency(1500, "GBP", "USD"), -1); ?></span> <span class="eur">&euro;<? echo round (convertCurrency(1500, "GBP", "EUR"), -1); ?></span> <small>per month</small></li>
+        <li class="price"><span class="gbp">&pound;1500</span> <span class="usd">&#36;<? echo round (convertCurrency(1500, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round (convertCurrency(1500, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
         <li class="bullet-item">Online documentation</li>
         <li class="bullet-item">50GB of file storage<sup>2</sup></li>
         <li class="bullet-item">Up to 5 editors</li>
@@ -106,7 +106,7 @@ get_header();
     <div class="small-12 medium-4 columns">
       <ul class="pricing-table" data-equalizer-watch>
         <li class="title">Professional</li>
-        <li class="price"><span class="gbp">&pound;2500</span> <span class="usd">&#36;<? echo round (convertCurrency(2500, "GBP", "USD"), -1); ?></span> <span class="eur">&euro;<? echo round (convertCurrency(2500, "GBP", "EUR"), -1); ?></span> <small>per month</small></li>
+        <li class="price"><span class="gbp">&pound;2500</span> <span class="usd">&#36;<? echo round (convertCurrency(2500, "GBP", "USD"), -1); ?>*</span> <span class="eur">&euro;<? echo round (convertCurrency(2500, "GBP", "EUR"), -1); ?>*</span> <small>per month</small></li>
         <li class="bullet-item">Includes 1 day of administrator training on site<sup>1</sup></li>
         <li class="bullet-item">100GB of file storage<sup>2</sup></li>
         <li class="bullet-item">Up to 10 editors</li>
@@ -140,6 +140,38 @@ get_header();
 
 	</div>
 </div>
+<hr>
+<section>
+  <div class="row">
+    <div class="large-12 columns">
+      <h4>Notes on Pricing</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <ul class="disc">
+        <li>All prices quoted are in GBP and exclude VAT.</li>
+        <li>All plans have a one year minimum subscription, then move to a rolling monthly contract which can be cancelled with 30 days notice.</li>
+        <li>You can upgrade to a bigger plan at any time. You can downgrade to a smaller package after an initial 6 months.</li>
+      </ul>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <div class="panel callout radius">
+        <p>Save 10% by paying up front for a  2 year subscription or save 15% with a 3 year subscription paid at commencement.<br>
+        <small>Discounts for advanced payment are available for subscriptions started before 1 May 2014.</small></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <p><small><sup>*</sup> Price for reference only. All prices are based on GBP.<br>
+      <sup>1</sup> We will only charge for travel expenses (since these will be variable depending on your location).<br>
+      <sup>2</sup> You can buy as much extra storage as you need, whenever you need it, so you’ll never have to worry about running out of space. Extra storage is charged at 50 pence per GB per month. I.e. 15 GB of additional space would be £7.50 per month.<br>
+      <sup>3</sup> You will need to register your chosen domain name (or sub-domain) and then point it to our servers.<br>
+      <sup>4</sup> Support is available Monday to Friday between 09:00 and 18:00 GMT and excludes UK public holidays. Response times refer to working hours. </small></p>
+    </div>
+  </div>
+</section>
 
 <div id="interface" class="reveal-modal screenshot" data-reveal>
   <img src="http://services.okblogfarm.org/files/2014/10/interface.png" alt="" />
