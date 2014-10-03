@@ -1,9 +1,4 @@
 <?php
-/*
-Author: Ole Fredrik Lie
-URL: http://olefredrik.com
-*/
-
 
 // Various clean up functions
 require_once('library/cleanup.php'); 
@@ -28,5 +23,8 @@ require_once('library/enqueue-scripts.php');
 
 // Add theme support
 require_once('library/theme-support.php');
+
+// Shortcodes
+require_once('library/shortcodes.php');
 
 ?>
