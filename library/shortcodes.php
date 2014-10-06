@@ -31,4 +31,17 @@ function column_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'column', 'column_shortcode' );
 
+//small
+function small_shortcode( $atts, $content = null ) {
+	return '<small>' . do_shortcode($content) . '</small>';
+}
+add_shortcode( 'small', 'small_shortcode' );
+
+
+//sup
+function sup_shortcode( $atts, $content = null ) {
+	return '<sup>' . $content . '</sup>';
+}
+add_shortcode( 'sup', 'sup_shortcode' );
+
 ?>

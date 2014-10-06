@@ -57,8 +57,11 @@ p:empty,
 br {
   display:none;
 }
-p br {
-  display:initial;
+p,
+td {
+  br {
+    display:initial;
+  }
 }
 
 
@@ -588,6 +591,34 @@ p br {
   
   
   //Tables
+  table {
+    thead {
+      tr {
+        th {
+          background-color:$info-color;
+          
+          &.blue {
+            background-color:$blue;
+            color:#fff;
+          }
+          &.express-blue {
+            background-color:$express-blue;
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+  
+  .full-table {
+    margin-left:- rem-calc(20);
+    margin-right:- rem-calc(20);
+    
+    table {
+      width:100%;
+    }
+  }
+  
   .comparison-table {
     width:100%;
     background-color:$table-even-row-bg;
@@ -598,11 +629,15 @@ p br {
     
     thead {
       background-color:transparent;
+      
+      th {
+        background-color:transparent;
+      }
     
       .compare-item {
         text-align:center;
-        background-color:$info-color;
         text-transform:uppercase;
+        background-color:$info-color;
         
         &.blue {
           background-color:$blue;
@@ -620,8 +655,6 @@ p br {
         
         @media #{$medium-up} {
           width:25%;
-          padding-top:20px;
-          padding-bottom:20px;
         }
       }
     }
@@ -659,7 +692,12 @@ p br {
     border:none;
     line-height:1.4;
     
-    p.icon {
+    &.full-panel {
+      margin-left:- rem-calc(20);
+      margin-right:- rem-calc(20);
+    }
+    
+    div.icon {
       text-align:center;
       font-size:rem-calc(70);
       margin-bottom:rem-calc(8);
@@ -677,6 +715,19 @@ p br {
       background-color:transparentize($express-blue, 0.9);
       [class^="icon-"], [class*=" icon-"] {
         color:$express-blue;
+      }
+    }
+    
+    &.left-icon { 
+      min-height: 114px;
+
+      div.icon {
+        float:left;
+      }
+      
+      p,
+      h5 {
+        margin-left:100px;
       }
     }
   }

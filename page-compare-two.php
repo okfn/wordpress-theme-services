@@ -118,13 +118,17 @@ get_header();
       <div class="row">
 				<div class="medium-6 columns">
 					<div class="panel express-blue">
-            <p class="icon"><span class="icon-checkmark-circle"></span></p>
-						<p>CKAN Express is available in three convenient price plans. Please contact services@okfn.org to get started.</p>
+            <div class="icon">
+              <span class="icon-checkmark-circle"></span>
+            </div>
+            <p>CKAN Express is available in three convenient price plans. Please contact services@okfn.org to get started.</p>
 					</div>
 				</div>
 				<div class="medium-6 columns">
 					<div class="panel blue">
-            <p class="icon"><span class="icon-checkmark-circle"></span></p>
+            <div class="icon">
+              <span class="icon-checkmark-circle"></span>
+            </div>
 						<p>Custom CKAN prices depend on the size, scope and complexity of your specific requirements. Please contact services@okfn.org to get started.</p>
 					</div>
 				</div>
