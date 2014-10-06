@@ -605,8 +605,19 @@ td {
             background-color:$express-blue;
             color:#fff;
           }
+          &.orange {
+            background-color:$orange;
+            color:#fff;
+          }
+        }
+        td {
+          vertical-align:top;
         }
       }
+    }
+    p {
+      font-size:inherit;
+      line-height:inherit;
     }
   }
   
@@ -630,12 +641,31 @@ td {
     thead {
       background-color:transparent;
       
+      tr.blue {
+        background-color:$blue;
+        color:#fff;
+      }
+      tr.express-blue {
+        background-color:$express-blue;
+        color:#fff;
+      }
+      tr.orange .compare-item {
+        background-color:$orange;
+        color:$body-font-color;
+        
+        &:nth-last-child(2) {
+          background-color:rgba($orange, .75);
+        }
+        &:nth-last-child(3) {
+          background-color:rgba($orange, .5);
+        }
+      }
+        
       th {
         background-color:transparent;
       }
     
       .compare-item {
-        text-align:center;
         text-transform:uppercase;
         background-color:$info-color;
         
@@ -647,14 +677,14 @@ td {
           background-color:$express-blue;
           color:#fff;
         }
+        &.orange {
+          background-color:$orange;
+          color:#fff;
+        }
         
         .has-tip {
           color:#fff;
           border:none;
-        }
-        
-        @media #{$medium-up} {
-          width:25%;
         }
       }
     }
@@ -664,6 +694,10 @@ td {
         td {
           background-color:$green;
           color:#fff;
+          
+          span {
+            color:#fff;
+          }
 
           &.no {
             background-color:$table-even-row-bg;
@@ -682,7 +716,26 @@ td {
       }
       
       .yes {
-        color:$primary-color;
+        span {
+          color:$primary-color;
+        }
+      }
+      .no:empty {
+        background-color:$table-even-row-bg;
+      }
+    }
+    
+    @media #{$medium-up} {
+      &.compare-two {
+        .compare-item {
+          width:25%;
+        }
+      }
+      
+      &.compare-three {
+        .compare-item {
+          width:25%;
+        }
       }
     }
   }
