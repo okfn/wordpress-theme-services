@@ -6,6 +6,7 @@ function row_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'row', 'row_shortcode' );
 
+
 //column
 function column_shortcode( $atts, $content = null ) {
 	$a = shortcode_atts( array(
@@ -27,9 +28,10 @@ function column_shortcode( $atts, $content = null ) {
     $class = 'small-12 columns';
   }
   
-	return '<div class="'.$class.'">' . $content . '</div>';
+	return '<div class="'.$class.'">' . do_shortcode($content) . '</div>';
 }
 add_shortcode( 'column', 'column_shortcode' );
+
 
 //small
 function small_shortcode( $atts, $content = null ) {
@@ -43,5 +45,71 @@ function sup_shortcode( $atts, $content = null ) {
 	return '<sup>' . $content . '</sup>';
 }
 add_shortcode( 'sup', 'sup_shortcode' );
+
+
+//hr
+function hr_func( $atts ){
+	return "<hr>";
+}
+add_shortcode( 'hr', 'hr_func' );
+
+
+//panel
+function panel_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'icon' => '',
+    'heading' => '',
+    'colour' => '',
+    'iconposition' => '',
+	), $atts );
+  
+  $i = esc_attr($a['icon']);
+  $h = esc_attr($a['heading']);
+  $c = esc_attr($a['colour']);
+  $p = esc_attr($a['iconposition']);
+  
+  $r = '<div class="panel';
+  if (!empty($c)) {
+    $r .= ' '.$c;
+  }
+  if (!empty($p)) {
+    $r .= ' '.$p.'-icon';
+  }
+  $r .= '">';
+  if (!empty($i)) {
+    $r .= '<div class="icon">
+              <span class="icon-'.$i.'"></span>
+            </div>';
+  }
+  if (!empty($h)) {
+    $r .= '<h5>'.$h.'</h5>';
+  }
+  $r .= $content . '
+					</div>';
+  
+	return $r;
+}
+add_shortcode( 'panel', 'panel_shortcode' );
+
+
+//blockquote
+function blockquote_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'by' => '',
+    'image' => '',
+	), $atts );
+  
+  $b = esc_attr($a['by']);
+  $i = esc_attr($a['image']);
+  
+  $r = '<blockquote>'. $content ;
+  if (!empty($b)) {
+    $r .= '<cite>'.$b.'</cite>';
+  }
+  $r .= '</blockquote>';
+  
+	return $r;
+}
+add_shortcode( 'blockquote', 'blockquote_shortcode' );
 
 ?>
