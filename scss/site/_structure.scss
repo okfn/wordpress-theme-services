@@ -771,6 +771,13 @@ td {
       }
     }
     
+    &.green {
+      background-color:transparentize($green, 0.9);
+      [class^="icon-"], [class*=" icon-"] {
+        color:$green;
+      }
+    }
+    
     &.left-icon { 
       min-height: 114px;
 
