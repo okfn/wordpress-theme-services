@@ -33,6 +33,13 @@ function column_shortcode( $atts, $content = null ) {
 add_shortcode( 'column', 'column_shortcode' );
 
 
+//lead
+function lead_shortcode( $atts, $content = null ) {
+	return '<p class="lead">' . $content . '</p>';
+}
+add_shortcode( 'lead', 'lead_shortcode' );
+
+
 //small
 function small_shortcode( $atts, $content = null ) {
 	return '<small>' . do_shortcode($content) . '</small>';
