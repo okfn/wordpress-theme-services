@@ -102,12 +102,14 @@ get_header();
         </div>
 			</div>
       
-      <div class="panel blue full-panel left-icon">
+      <div class="panel blue left-icon">
         <div class="icon">
           <span class="icon-thumbs-up"></span>
         </div>
-        <h5>Recommended for</h5>
-        <p>Organisations with a defined set of requirements Existing CKAN installations.</p>
+        <div class="text">
+          <h5>Recommended for</h5>
+          <p>Organisations with a defined set of requirements Existing CKAN installations.</p>
+        </div>
       </div>
       
 			<footer>

@@ -781,13 +781,23 @@ td {
     &.left-icon { 
       min-height: 114px;
 
-      div.icon {
-        float:left;
+      div.icon,
+      div.text {
+        display:table-cell;
       }
       
-      p,
-      h5 {
-        margin-left:100px;
+      div.icon {
+        line-height:1;
+        margin:0;
+      }
+      
+      div.text {
+        padding-left:20px;
+        vertical-align:middle;
+        
+        & > *:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

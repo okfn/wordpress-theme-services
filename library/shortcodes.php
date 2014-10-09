@@ -81,11 +81,17 @@ function panel_shortcode( $atts, $content = null ) {
               <span class="icon-'.$i.'"></span>
             </div>';
   }
+  if (!empty($p)) {
+    $r .= '<div class="text">';
+  }
   if (!empty($h)) {
     $r .= '<h5>'.$h.'</h5>';
   }
-  $r .= $content . '
-					</div>';
+  $r .= $content;
+	if (!empty($p)) {
+    $r .= '</div>';
+  }			
+  $r .= '</div>';
   
 	return $r;
 }
