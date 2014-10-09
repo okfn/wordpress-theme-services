@@ -108,13 +108,23 @@ function blockquote_shortcode( $atts, $content = null ) {
   $b = esc_attr($a['by']);
   $i = esc_attr($a['image']);
   
-  $r = '<blockquote>'. $content ;
-  if (!empty($b)) {
-    $r .= '<cite>'.$b.'</cite>';
+  $r0 = '<div class="panel blockquote">';
+  if (!empty($i)) {
+    $r1 = '<div class="image-quote">
+    <div class="image"><img src="'.$i.'" alt="'.$b.'"></div>
+    <div class="text">';
   }
-  $r .= '</blockquote>';
+  $r2 = '<blockquote>'. $content ;
+  if (!empty($b)) {
+    $r2 .= '<cite>'.$b.'</cite>';
+  }
+  $r2 .= '</blockquote>';
+  if (!empty($i)) {
+    $r3 = '</div></div>';
+  }
+  $r4 = '</div>';
   
-	return $r;
+	return $r0.$r1.$r2.$r3.$r4;
 }
 add_shortcode( 'blockquote', 'blockquote_shortcode' );
 

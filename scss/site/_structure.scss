@@ -457,6 +457,45 @@ td {
  * ----------------------------------------------------------------------------
  */
 
+//blockquotes
+
+blockquote {
+  cite {
+    padding-top:10px;
+  }  
+}
+
+.image-quote {
+  .image {
+    display:table-cell;
+    
+    img {
+      width:200px;
+    }
+    
+    @media #{$small-only} {
+      display:none;
+    }
+  }
+  .text {
+    display:table-cell;
+    vertical-align:middle;
+    padding-left:10px;
+    
+    blockquote {
+      border:none;
+      position:relative;
+      
+      &:before {
+        content:'\201C';
+        position:absolute;
+        left:5px;
+        top:0;
+        font-size:rem-calc(30);
+      }
+    }
+  }
+}
 
 	/**
 	 * 4.1 Pages
