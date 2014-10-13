@@ -25,11 +25,11 @@ get_header();
       <div class="full-table">
       <table>
         <thead>
-          <tr>
-            <th class="blue" width="25%">Junior SysAdmin / Developer</th>
-            <th class="blue" width="25%">Consultant / Developer / PM</th>
-            <th class="blue" width="25%">Senior Consultant / Developer</th>
-            <th class="blue" width="25%">Principal / Director</th>
+          <tr class="blue">
+            <th width="25%">Junior SysAdmin / Developer</th>
+            <th width="25%">Consultant / Developer / PM</th>
+            <th width="25%">Senior Consultant / Developer</th>
+            <th width="25%">Principal / Director</th>
           </tr>
         </thead>
         <tbody>
@@ -70,11 +70,13 @@ get_header();
       
       <div class="row">
         <div class="small-12 columns">
-          <?php
-          if(get_field('content_2')) {
-            echo get_field('content_2');
-          }        
-          ?>
+          <div class="entry-content">
+            <?php
+            if(get_field('content_2')) {
+              echo get_field('content_2');
+            }        
+            ?>
+          </div>
         </div>
 			</div>
       

@@ -457,6 +457,18 @@ td {
  * ----------------------------------------------------------------------------
  */
 
+div[role=main] {
+  .entry-content {
+    h2 {
+      margin-top:rem-calc(25);
+      
+      &:nth-child(n+2) {
+        margin-top:rem-calc(40);
+      }
+    }
+  }
+}
+
 //blockquotes
 
 blockquote {
@@ -653,6 +665,23 @@ blockquote {
         td {
           vertical-align:top;
         }
+        
+        &.blue {
+          th {
+            background-color:$blue;
+            color:#fff;
+            
+            &:nth-last-child(2) {
+              background-color:rgba($blue, .8);
+            }
+            &:nth-last-child(3) {
+              background-color:rgba($blue, .6);
+            }
+            &:nth-last-child(4) {
+              background-color:rgba($blue, .4);
+            }
+          }
+        }
       }
     }
     p {
@@ -694,10 +723,10 @@ blockquote {
         color:$body-font-color;
         
         &:nth-last-child(2) {
-          background-color:rgba($orange, .75);
+          background-color:rgba($orange, .8);
         }
         &:nth-last-child(3) {
-          background-color:rgba($orange, .5);
+          background-color:rgba($orange, .6);
         }
       }
         
