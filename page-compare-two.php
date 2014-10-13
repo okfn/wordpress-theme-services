@@ -27,97 +27,97 @@ get_header();
         </thead>
         <tbody>
           <tr>
-            <td>Browser previews for viewing Excel, CSV, geoJSON, and image files</td>
+            <td><strong>Browser previews</strong> for viewing Excel, CSV, geoJSON, and image files</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Ability to easily create chart, graphs and maps for tabular data</td>
+            <td><strong>Ability to easily create charts, graphs and maps</strong> for tabular data</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Full authorization and access management (editors, admins, private datasets)</td>
+            <td><strong>Full authorization and access management</strong> (editors, admins, private datasets)</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Browsable, searchable interface with filters (via web interface and catalog API)</td>
+            <td><strong>Browsable, searchable interface</strong> with filters (via web interface and catalog API)</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Homepage customisation</td>
+            <td><strong>Homepage customisation</strong></td>
             <td class="no">Standard (logo, layout, colour)</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Standard content management: editable information pages, plus a blog feature</td>
+            <td><strong>Standard content management</strong>: editable information pages, plus a blog feature</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Datastore and datapusher: allows querying and building on tabular data via Data API</td>
+            <td><strong>Datastore and datapusher</strong>: allows querying and building on tabular data via Data API</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Ability to be harvested by Data.gov.uk and other aggregators (inc. publicdata.eu)</td>
+            <td><strong>Ability to be harvested</strong> by Data.gov.uk and other aggregators (inc. publicdata.eu)</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Enhanced security: Secure Sockets Layer (SSL)</td>
+            <td><strong>Enhanced security</strong>: Secure Sockets Layer (SSL)</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Custom domain</td>
+            <td><strong>Custom domain</strong></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Setting up, basic customisation, system deployment and on-going management including updates and security fixes</td>
+            <td><strong>Basic customisation, system deployment and on-going management</strong> including updates and security fixes</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Guaranteed uptime and 99.9% system availability SLA</td>
+            <td><strong>Guaranteed uptime and 99.9% system availability SLA</strong></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Option to host on own infrastructure</td>
+            <td><strong>Option to host on own infrastructure</strong></td>
             <td class="no">&nbsp;</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
           <tr>
-            <td>Themed and branded to complement existing sites</td>
-            <td class="no">&nbsp;</td>
-            <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
-          </tr><tr>
-            <td>Bespoke application extensions developed</td>
+            <td><strong>Customised, themed and branded</strong> to complement existing sites</td>
             <td class="no">&nbsp;</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr><tr>
-            <td>Custom metadata schema using your taxonomies and requirements</td>
+            <td><strong>Bespoke application extensions</strong></td>
             <td class="no">&nbsp;</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr><tr>
-            <td>Integration with geospatial servers or other data portals for syncing and federation</td>
+            <td><strong>Custom metadata schema</strong> using your taxonomies and requirements</td>
             <td class="no">&nbsp;</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr><tr>
-            <td>Specialist modifications, extensions or new features for work-flows (e.g. approve stages, moderation), mapping, visualization, dashboards, spatial previews, showcases, and apps etc.</td>
+            <td><strong>Integration with geospatial servers</strong> or other data portals for syncing and federation</td>
+            <td class="no">&nbsp;</td>
+            <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
+          </tr><tr>
+            <td><strong>Specialist modifications</strong>, extensions and new features for work-flows (e.g. approve stages, moderation), mapping, visualization, dashboards, spatial previews, showcases, and apps etc.</td>
             <td class="no">&nbsp;</td>
             <td class="yes"><span class="icon-checkmark" aria-label="Yes"></span></td>
           </tr>
         </tbody>
       </table>
       
-      <div class="row">
+      <div class="row" data-equalizer>
 				<div class="medium-6 columns">
-					<div class="panel express-blue">
+					<div class="panel express-blue" data-equalizer-watch>
             <div class="icon">
               <span class="icon-checkmark-circle"></span>
             </div>
@@ -125,7 +125,7 @@ get_header();
 					</div>
 				</div>
 				<div class="medium-6 columns">
-					<div class="panel blue">
+					<div class="panel blue" data-equalizer-watch>
             <div class="icon">
               <span class="icon-checkmark-circle"></span>
             </div>
