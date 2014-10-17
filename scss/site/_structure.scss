@@ -466,8 +466,22 @@ div[role=main] {
         margin-top:rem-calc(40);
       }
     }
+    
+    .accordion {
+      margin-bottom: 2.5rem;
+      
+      dd {
+        border-bottom:solid 1px #fff;
+        
+        &.active > a {
+          background-color:$primary-color;
+          color:#fff;
+        }
+      }
+    }
   }
 }
+
 
 //blockquotes
 
