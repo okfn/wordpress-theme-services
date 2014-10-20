@@ -547,6 +547,7 @@ blockquote {
     }
     .button {
       margin-bottom:30px;
+      visibility:hidden;
       
       @media #{$small-only} { 
         width:100%;
